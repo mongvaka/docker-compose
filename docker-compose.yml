@@ -28,9 +28,10 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=postgres
   api:
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    image: mongmang/const-api:latest
+    # build:
+    #   context: ./
+    #   dockerfile: Dockerfile
     depends_on:
       - db
     environment:
