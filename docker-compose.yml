@@ -1,19 +1,15 @@
 version: '3.8'
 services:
-#  app:
-#   image: mongmang/monghub:app
-#   depends_on:
-#    - api
-#   environment:
-#    API_URL: api
-#    NODE_ENV: development
-#    PORT: 4200:80
-#   ports:
-#    - 4200:80
-#   working_dir: /home/node/app
-#   volumes:
-#    - ./:/home/node/app
-#    - node_modules:/home/node/app/node_modules
+  app:
+    image: mongmang/const-app:latest
+    depends_on:
+    - api
+    environment:
+      API_URL: api
+      NODE_ENV: development
+      PORT: 1200:80
+    ports:
+    - 1200:80
   db:
     image: postgres:14.3
     # expose:
